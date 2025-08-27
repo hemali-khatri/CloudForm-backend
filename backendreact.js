@@ -8,10 +8,10 @@ const port = 3000;
 
 app.use(cors());
 
-const dbHost = process.env.DB_HOST || 'localhost';  // Default to 'localhost' for local development
+const dbHost = process.env.DB_HOST || '127.0.0.1';  // Default to 'localhost' for local development
 const dbPort = process.env.DB_PORT || 3306;         // Default to 3306 if not specified
 const dbUser = process.env.DB_USER || 'root';       // Default to 'root' for local dev (can be customized)
-const dbPassword = process.env.DB_PASSWORD || '';   // Add a default empty password for local
+const dbPassword = process.env.DB_PASSWORD || 'Tatva@123';   // Add a default empty password for local
 
 // Create MySQL connection
 const db = mysql.createConnection({
