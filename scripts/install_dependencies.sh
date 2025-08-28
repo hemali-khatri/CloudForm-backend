@@ -3,9 +3,9 @@
 APP_DIR="/home/ec2-user/backend-app"
 cd "$APP_DIR"
 
-# Install Node.js 22.x
-echo "Installing Node.js 22..."
-curl -fsSL https://rpm.nodesource.com/setup_22.x | sudo bash -
+# Install Node.js 18.x
+echo "Installing Node.js 18..."
+curl -fsSL https://rpm.nodesource.com/setup_18.x | sudo bash -
 sudo yum install -y nodejs
 
 # Fix file ownership and permissions
