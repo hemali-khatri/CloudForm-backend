@@ -15,5 +15,8 @@ phases:
 artifacts:
   files:
     - appspec.yml
-    - dist/**/*
+    - package.json
+    - backendreact.js
+    - index.js
+    - server.js
     - scripts/**/*  # Only if you're using hooks
