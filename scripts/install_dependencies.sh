@@ -1,16 +1,10 @@
 #!/bin/bash
+cd /home/ec2-user/backend-app
 
-APP_DIR="/home/ec2-user/backend-app"
-cd "$APP_DIR"
-
-# Install Node.js 16.x (LTS version for Amazon Linux 2)
-echo "Installing Node.js 16..."
+echo "Installing Node.js..."
 curl -sL https://rpm.nodesource.com/setup_16.x | sudo bash -
-sudo yum install -y nodejs
 
-# Fix file ownership and permissions
-echo "Fixing permissions..."
-sudo chown -R ec2-user:ec2-user "$APP_DIR"
+sudo yum install -y nodejs
 
 # Install dependencies
 echo "Installing project dependencies..."
