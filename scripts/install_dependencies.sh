@@ -1,11 +1,17 @@
 #!/bin/bash
-cd /home/ec2-user/backend-app
 
-# Install Node.js 16.x (using sudo to ensure proper permissions)
-echo "Installing Node.js..."
-curl -sL https://rpm.nodesource.com/setup_16.x | sudo bash -
+APP_DIR="/home/ec2-user/backend-app"
+cd "$APP_DIR"
+
+# Install Node.js 22.x
+echo "Installing Node.js 22..."
+curl -fsSL https://rpm.nodesource.com/setup_22.x | sudo bash -
 sudo yum install -y nodejs
 
-# Install project dependencies (use sudo to ensure npm is available)
+# Fix file ownership and permissions
+echo "Fixing permissions..."
+sudo chown -R ec2-user:ec2-user "$APP_DIR"
+
+# Install dependencies
 echo "Installing project dependencies..."
 npm install
