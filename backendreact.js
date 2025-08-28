@@ -43,6 +43,11 @@ app.get('/api/users', (req, res) => {
   });
 });
 
-app.listen(port, () => {
+// Health check endpoint
+app.get('/health', (req, res) => {
+  res.status(200).send('Healthy');
+});
+
+app.listen(port, '0.0.0.0', () => {
   console.log(`Server is running on http://localhost:${port}`);
 });
