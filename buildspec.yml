@@ -18,5 +18,4 @@ artifacts:
     - package.json
     - backendreact.js
     - index.js
-    - server.js
     - scripts/**/*  # Only if you're using hooks

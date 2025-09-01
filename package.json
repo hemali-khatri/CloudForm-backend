@@ -4,7 +4,10 @@
   "main": "index.js",
   "scripts": {
     "build": "webpack --config webpack.config.js",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "migrate": "knex migrate:latest --env development",
+    "seed": "knex seed:run --env development",
+    "migrate:rollback": "knex migrate:rollback --env development"
   },
   "keywords": [],
   "author": "",
@@ -12,7 +15,10 @@
   "description": "",
   "dependencies": {
     "cors": "^2.8.5",
-    "express": "^5.1.0",
+    "express": "^5.1.0"
+  },
+  "devDependencies": {
+    "knex": "^3.1.0",
     "mysql2": "^3.14.3"
   }
 }
