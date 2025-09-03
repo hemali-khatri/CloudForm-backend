@@ -18,4 +18,6 @@ artifacts:
     - package.json
     - backendreact.js
     - index.js
+    - migrations/**/*  # Include migration files if any
+    - seeds/**/*       # Include seed files if any
     - scripts/**/*  # Only if you're using hooks
