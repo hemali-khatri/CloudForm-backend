@@ -2,16 +2,17 @@
 const express = require('express');
 const mysql = require('mysql2');
 const cors = require('cors');
+require('dotenv').config();
 
 const app = express();
 const port = 3000;
 
 app.use(cors());
 
-const dbHost = process.env.DB_HOST || '127.0.0.1';  // Default to 'localhost' for local development
-const dbPort = process.env.DB_PORT || 3306;         // Default to 3306 if not specified
-const dbUser = process.env.DB_USER || 'root';       // Default to 'root' for local dev (can be customized)
-const dbPassword = process.env.DB_PASSWORD || 'Tatva@123';   // Add a default empty password for local
+const dbHost = process.env.DB_HOST;  // Default to 'localhost' for local development
+const dbPort = process.env.DB_PORT;         // Default to 3306 if not specified
+const dbUser = process.env.DB_USER;       // Default to 'root' for local dev (can be customized)
+const dbPassword = process.env.DB_PASSWORD;   // Add a default empty password for local
 
 // Create MySQL connection
 const db = mysql.createConnection({
@@ -19,7 +20,7 @@ const db = mysql.createConnection({
   port: dbPort,
   user: dbUser, // 'root',
   password: dbPassword, //'Tatva@123', // Replace with your MySQL password
-  database: process.env.DB_NAME || 'finalproject'
+  database:'finalproject'
 });
 
 // Connect to MySQL
