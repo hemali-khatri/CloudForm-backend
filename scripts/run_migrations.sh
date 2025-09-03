@@ -37,7 +37,7 @@ echo "======================================"
 
 # # Pass creds as ENV variables so knexfile.js can read them
 # export DB_USER DB_PASS DB_HOST DB_NAME
-
+cd /home/ec2-user/backend-app
 # Run migrations
 npx knex migrate:latest --env production
 
