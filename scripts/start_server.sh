@@ -6,10 +6,6 @@ echo "Starting Node.js backend server..."
 
 cd "$APP_DIR"
 
-# Ensure env vars are loaded (if set in /etc/profile.d/)
-source /etc/profile.d/db_env.sh
-source /etc/profile.d/api_url.sh
-
 # Start the backend app using PM2
 pm2 start backendreact.js --name backend-app
 
