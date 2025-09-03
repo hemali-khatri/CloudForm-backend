@@ -8,11 +8,11 @@ hooks:
     - location: scripts/stop_server.sh
       runas: ec2-user
 
-  AfterInstall:
+  BeforeInstall:
     - location: scripts/install_dependencies.sh
       runas: ec2-user
 
-  BeforeAllowTraffic:
+  AfterInstall:
     - location: scripts/run_migrations.sh
       runas: ec2-user
 
