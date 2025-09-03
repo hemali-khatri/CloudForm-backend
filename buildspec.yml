@@ -21,3 +21,4 @@ artifacts:
     - migrations/**/*  # Include migration files if any
     - seeds/**/*       # Include seed files if any
     - scripts/**/*  # Only if you're using hooks
+    - knexfile.js  # Include if using Knex for migrations
