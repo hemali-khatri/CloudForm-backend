@@ -22,7 +22,3 @@ artifacts:
     - appspec.yml
     - package.json
     - backendreact.js
-    - knexfile.js
-    - migrations/**/* 
-    - seeds/**/*      
-    - scripts/**/*
