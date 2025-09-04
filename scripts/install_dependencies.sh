@@ -1,5 +1,4 @@
 #!/bin/bash
-cd /home/ec2-user/backend-app
 
 APP_DIR="/home/ec2-user/backend-app"
 cd "$APP_DIR"
