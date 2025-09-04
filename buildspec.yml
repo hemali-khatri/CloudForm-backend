@@ -7,18 +7,22 @@ phases:
     commands:
       - echo Installing dependencies...
       - npm install
+
   build:
     commands:
       - echo Build phase...
       - npm run build || echo "No build script defined"
+
+  post_build:
+    commands:
+      - echo Build completed on `date`
 
 artifacts:
   files:
     - appspec.yml
     - package.json
     - backendreact.js
-    - index.js
-    - migrations/**/*  # Include migration files if any
-    - seeds/**/*       # Include seed files if any
-    - scripts/**/*  # Only if you're using hooks
-    - knexfile.js  # Include if using Knex for migrations
+    - knexfile.js
+    - migrations/**/* 
+    - seeds/**/*      
+    - scripts/**/*
