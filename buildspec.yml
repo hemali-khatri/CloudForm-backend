@@ -21,6 +21,7 @@ artifacts:
   files:
     - appspec.yml
     - index.js
+    - print.js
     - package.json
     - backendreact.js
     - knexfile.js
